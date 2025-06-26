@@ -1,4 +1,4 @@
-# SQL_Project
+# [SQL] Online_Sales
 Bộ dữ liệu chứa thông ẩn danh về các giao dịch bán hàng online như thông tin về sản phẩm, khách hàng, vận chuyển, ... từ dầu năm 2020 đến hết năm 2024 với tổng số 43848 bản ghi và 17 trường dữ liệu. Cụ thể bộ dữ liệu bao gồm các trường dữ liệu như sau: 
 1. InvoiceNo: Mã giao dịch
 2. StockCode: Mã kho chứa hàng 
