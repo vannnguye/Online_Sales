@@ -129,7 +129,7 @@ ORDER BY Mon DESC
 --TOP 5 MẶT HÀNG CÓ TỶ LỆ ƯU TIÊN VẬN CHUYỂN CAO
 
 SELECT TOP 5 Description, 
-	ROUND((SUM(CASE WHEN OrderPriority = 'High' then 1 else 0 end)*100/COUNT(*)),4) AS high_orderpriority_percent
+	ROUND((SUM(CASE WHEN OrderPriority = 'High' then 1 else 0 end)*100/COUNT(*)),4) AS high_orderpriority_rate
 FROM dbo.sales
 GROUP BY Description
 ORDER BY ROUND((SUM(CASE WHEN OrderPriority = 'High' then 1 else 0 end)*100/COUNT(*)),4) DESC
@@ -138,7 +138,7 @@ ORDER BY ROUND((SUM(CASE WHEN OrderPriority = 'High' then 1 else 0 end)*100/COUN
 --TOP 5 MẶT HÀNG CÓ TỶ LỆ TRẢ HÀNG CAO NHẤT
 
 SELECT TOP 5 Description, 
-	ROUND((SUM(CASE WHEN ReturnStatus = 'Returned' then 1 else 0 end)*100/COUNT(*)),4) AS returned_percent
+	ROUND((SUM(CASE WHEN ReturnStatus = 'Returned' then 1 else 0 end)*100/COUNT(*)),4) AS returned_rate
 FROM dbo.sales
 GROUP BY Description
 ORDER BY ROUND((SUM(CASE WHEN ReturnStatus = 'Returned' then 1 else 0 end)*100/COUNT(*)),4) DESC
